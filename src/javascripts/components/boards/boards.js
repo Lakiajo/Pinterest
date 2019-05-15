@@ -1,6 +1,7 @@
 import boardsData from '../../helpers/data/boardsData';
 import 'bootstrap';
 import util from '../../helpers/util';
+import pins from '../pins/pins';
 
 // Callback function shows or hides the pins.
 const seePinDiv = (e) => {
@@ -8,6 +9,7 @@ const seePinDiv = (e) => {
   console.error('THis!', boardId);
   document.getElementById('boards-page').classList.add('hide');
   document.getElementById('pins-page').classList.remove('hide');
+  pins.initPins(boardId);
 };
 
 // Binds callback to the buttons and takes you to the seleceted pins page.
